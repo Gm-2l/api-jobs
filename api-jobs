@@ -1,0 +1,110 @@
+Welcome to Node.js v22.15.0.
+Type ".help" for more information.
+> mkdir api-jobs
+mkdir api-jobs
+      ^^^
+
+Uncaught SyntaxError: Unexpected identifier 'api'
+> cd api-jobs
+cd api-jobs
+   ^^^
+
+Uncaught SyntaxError: Unexpected identifier 'api'
+> npm init -y
+npm should be run outside of the Node.js REPL, in your normal shell.
+(Press Ctrl+D to exit.)
+> npm install express cors
+npm should be run outside of the Node.js REPL, in your normal shell.
+(Press Ctrl+D to exit.)
+> const express = require('express');
+Uncaught Error: Cannot find module 'express'
+Require stack:
+- <repl>
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '<repl>' ]
+}
+> const cors = require('cors');
+Uncaught Error: Cannot find module 'cors'
+Require stack:
+- <repl>
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '<repl>' ]
+}
+> const app = express();
+Uncaught ReferenceError: express is not defined
+>
+> app.use(cors());
+Uncaught ReferenceError: app is not defined
+> app.use(express.json());
+Uncaught ReferenceError: app is not defined
+>
+> let jobs = [
+...   {
+...     id: 1,
+...     title: "Front-end Developer",
+...     company: "Company X",
+...     category: "IT",
+...     link: "https://company-x.com/job1"
+...   },
+...   {
+...     id: 2,
+...     title: "Freelance Designer",
+...     company: "Agency Y",
+...     category: "Freelancer",
+...     link: "https://agency-y.com/job2"
+...   }
+... ];
+undefined
+>
+> app.get('/jobs', (req, res) => {
+...   const { category } = req.query;
+...   if (category) {
+...     const filtered = jobs.filter(job => job.category === category);
+...     res.json(filtered);
+...   } else {
+...     res.json(jobs);
+...   }
+... });
+Uncaught ReferenceError: app is not defined
+>
+> app.listen(process.env.PORT || 3000, () => {
+...   console.log('API running...');
+... });
+Uncaught ReferenceError: app is not defined
+> "scripts": {
+"scripts": {
+         ^
+
+Uncaught SyntaxError: Unexpected token ':'
+>   "start": "node server.js"
+  "start": "node server.js"
+         ^
+
+Uncaught SyntaxError: Unexpected token ':'
+> }
+}
+^
+
+Uncaught SyntaxError: Unexpected token '}'
+>git init
+git add .
+git commit -m "first version of the job vacancies API"
+git branch -M main
+git remote add origin https://github.com/yourusername/api-vagas.git
+git push -u origin main
