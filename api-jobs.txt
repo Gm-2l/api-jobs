@@ -19,7 +19,6 @@ Wrote to C:\Users\pphma\api-jobs\package.json:
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -37,12 +36,36 @@ Wrote to C:\Users\pphma\api-jobs\package.json:
 
 PS C:\Users\pphma\api-jobs> npm install express cors
 
-up to date, audited 69 packages in 2s
+up to date in 2m
 
 14 packages are looking for funding
   run `npm fund` for details
-
-found 0 vulnerabilities
 PS C:\Users\pphma\api-jobs> notepad index.js
 PS C:\Users\pphma\api-jobs> node index.js
 API rodando na porta 3000...
+PS C:\Users\pphma\api-jobs> git init
+Reinitialized existing Git repository in C:/Users/pphma/api-jobs/.git/
+PS C:\Users\pphma\api-jobs> git add index.js package.json
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\pphma\api-jobs> git commit -m "Adiciona arquivos principais"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'pphma@PH.(none)')
+PS C:\Users\pphma\api-jobs> git config --global user.name "Luan"
+PS C:\Users\pphma\api-jobs> git config --global user.email "Luangd76@gmail.com"
+PS C:\Users\pphma\api-jobs> git commit -m "Adiciona arquivos principais"
+[master (root-commit) 138ea60] Adiciona arquivos principais
+ 2 files changed, 110 insertions(+)
+ create mode 100644 index.js
+ create mode 100644 package.json
+PS C:\Users\pphma\api-jobs>
