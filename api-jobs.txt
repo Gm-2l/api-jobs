@@ -1,0 +1,47 @@
+O Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+Instale o PowerShell mais recente para obter novos recursos e aprimoramentos! https://aka.ms/PSWindows
+
+PS C:\Users\pphma> node -v
+v22.15.0
+PS C:\Users\pphma> npm -vmkdir api-jobs
+Unknown command: "api-jobs"
+
+To see a list of supported npm commands, run:
+  npm help
+PS C:\Users\pphma> cd api-jobs
+PS C:\Users\pphma\api-jobs> npm init -y
+Wrote to C:\Users\pphma\api-jobs\package.json:
+
+{
+  "name": "api-jobs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
+
+
+
+PS C:\Users\pphma\api-jobs> npm install express cors
+
+up to date, audited 69 packages in 2s
+
+14 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\pphma\api-jobs> notepad index.js
+PS C:\Users\pphma\api-jobs> node index.js
+API rodando na porta 3000...
